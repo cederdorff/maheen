@@ -81,9 +81,29 @@ const numbers3 = [1, 0, 3, 6, 11, -7, -2];
 const results = numbers3.filter(number => number > 0);
 console.log(results);
 
-let count = 0;
+function stopWatch() {
+    let count = 0;
 
-setInterval(() => {
-    count++;
-    document.write(count);
-}, 1000);
+    setInterval(() => {
+        count++;
+        console.log(count);
+    }, 1000);
+}
+
+// stopWatch();
+
+function total(number) {
+    console.log(number);
+    number = number + "";
+    console.log(number);
+    const array = number.split("");
+    console.log(array);
+
+    let sum = 0;
+    array.forEach(stringNumber => {
+        sum = sum + parseInt(stringNumber);
+    });
+    console.log(sum);
+}
+
+total(569);
